@@ -1,0 +1,86 @@
+* {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    text-align: center;
+    padding: 70px;
+    
+  }
+
+  input {
+    width: 80%;
+    height: 40px;
+  }
+
+  button {
+    margin: -70px;
+  }
+  .banner {
+    background-image: url(https://blog.lootcrate.com/wp-content/uploads/2020/04/1560513694_834353f410058c3f7ae2f80fd8f4a26c.gif);
+    /* background-repeat: no-repeat; */
+    background-position: 50% 30%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* height: 400px; */
+  }
+
+  .title {
+    padding-bottom: 30px;
+  }
+
+  .subtitle-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .residents-container {
+    display:  flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  
+  .resident-item {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    
+    
+  }
+  
+  .resident-card {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    height: 100%;
+  }
+  
+  .resident-card img {
+    width: 100%;
+  }
+  
+  @media (min-width: 458px) {
+    .resident-item {
+      width: 50%;
+    }
+    .banner {
+      height: 300px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .resident-item {
+      width: 33.3333333%;
+      height: 400px;
+    }
+  }
+  
+  @media (min-width: 982px) {
+    .resident-item {
+      width: 25%;
+      height: 600px;
+    }
+  }
+  
