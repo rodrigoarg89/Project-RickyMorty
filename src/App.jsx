@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Pagination from "./components/Pagination";
 import ResidentInfo from "./components/ResidentInfo";
+// import SearchBox from "./components/SearchBox";
 import "./styles.css";
 
 function App() {
@@ -25,18 +27,35 @@ function App() {
   //
 
   return (
-    <div>
+    <div className="main">
       <div className="banner"></div>
-      <div className="App">
-        <h1 className="title">RICK AND MORTY WIKI</h1>
-
-        <div>
-          <input
-            type="text"
-            value={typeId}
-            onChange={(e) => setTypeId(e.target.value)}
+      <div className="rm-logo">
+          <img
+            className="logo-poke"
+            src="https://vignette.wikia.nocookie.net/logopedia/images/b/b1/Rick_and_Morty.svg/revision/latest?cb=20180522080112"
+            alt=""
           />
-          <button onClick={searchType}>Search</button>
+      </div>
+      <div className="App">
+        <div className="wiki">
+          <h1>RICK AND MORTY WIKI</h1>
+        {/* <SearchBox /> */}
+
+        </div>
+        <div className="type-id">
+          <div>
+            <input
+            id="wiki"
+              className="input-type"
+              type="text"
+              value={typeId}
+              placeholder="please, enter a location number (1-126). Example 20"
+              onChange={(e) => setTypeId(e.target.value)}
+            />
+            <button className="btn-type" onClick={searchType}>
+              Search
+            </button>
+          </div>
         </div>
 
         <h1>
@@ -53,12 +72,11 @@ function App() {
             <b>Residents:</b> {character.residents?.length}
           </h2>
         </div>
-
-        <ul className="residents-container">
-          {character.residents?.map((resident) => (
-            <ResidentInfo url={resident} key={resident} />
-          ))}
-        </ul>
+      </div>
+      <div className="residents-container">
+        {character.residents?.map((resident) => (
+          <ResidentInfo url={resident} key={resident} />
+        ))}
       </div>
     </div>
   );
