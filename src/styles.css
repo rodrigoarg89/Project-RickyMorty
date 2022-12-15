@@ -1,86 +1,180 @@
 * {
-    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-    box-sizing: border-box;
-  }
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.main {
+  background-color: #000 !important;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+body {
+  margin: 0px !important;
+  background-color: #000;
+  font-size: 0.9em;
+  height: 1400px;
+}
+
+input {
+  width: 80%;
+  height: 40px;
+}
+
+.banner {
+  background-image: url(https://i.pinimg.com/originals/b1/45/3c/b1453c3b76f69f00303029fadd2329ad.gif);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: cover;
+  height: 350px;
+}
+
+.rm-logo {
+  display: grid;
+  place-items: center;
+  margin-top: 15px;
+  margin-bottom: 10%;
+}
+
+.logo-poke {
+  width: 60%;
+  max-width: 650px;
+  margin-top: 5%;
+  filter: drop-shadow(0 0 3em #0fcf59aa);
+}
+
+.logo-poke:hover {
+  filter: drop-shadow(0 0 3em #2be58eaa);
+}
+
+.wiki {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  /* width: 80%; */
+  /* margin: 0 auto; */
+}
+
+.type-id {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.input-type {
+  border-radius: 7px solid ;
+  border-width: 3px;
+  border-color: #0fcf59aa;
+
+  margin-left: 0px;
+  margin-bottom: 5%;
+  width: 80%;
+}
+
+.input-type:hover {
+  border-color:  #2be58eaa;
+}
+
+.btn-type {
+  margin-left: -65px;
+  background-color: #0fcf59aa;
+  border-color: #2be58eaa ;
+  cursor: pointer;
+
+}
+
+.btn-type {
+  border-color:  #2be58eaa;
+}
+
+.residents-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  list-style: none;
+  filter: drop-shadow(0 0 3em #0fcf59aa);
+  gap: 20px;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+/* .resident-item {
+  width: 100%;
+  padding: 10px;
+} */
+
+.resident-card {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  height: 100%;
   
-  .App {
-    text-align: center;
-    padding: 70px;
-    
-  }
+}
 
-  input {
-    width: 80%;
-    height: 40px;
-  }
+.resident-card:hover {
+  filter: drop-shadow(0 0 3em #2be58eaa);
 
-  button {
-    margin: -70px;
+}
+
+ul {
+  list-style: none;
+}
+
+
+.resident-card img {
+  width: 100%;
+}
+@media (max-width: 280px) {
+.banner {
+  height: 110px;
   }
+}
+@media (min-width: 280px) and (max-width: 499px) {
+/* .resident-item {
+  width: 50%;
+  } */
+
+.title {
+  margin-top: -170px;
+  color: #5fe03f;
+  }
+.banner {
+  height: 140px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+/* .resident-item {
+  width: 50%;
+  } */
+
+.banner {
+  height: 170px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+/* .resident-item {
+    width: 33.3333333%;
+    height: 400px;
+  } */
   .banner {
-    background-image: url(https://blog.lootcrate.com/wp-content/uploads/2020/04/1560513694_834353f410058c3f7ae2f80fd8f4a26c.gif);
-    /* background-repeat: no-repeat; */
-    background-position: 50% 30%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    /* height: 400px; */
+    height: 200px;
   }
+  .input-type {
+    width: 50%;
+  }
+}
 
-  .title {
-    padding-bottom: 30px;
+@media (min-width: 982px) {
+  /* .resident-item {
+    width: 25%;
+    height: 600px;
+  } */
+  .input-type {
+    width: 50%;
   }
-
-  .subtitle-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  
-  .residents-container {
-    display:  flex;
-    flex-wrap: wrap;
-    list-style: none;
-  }
-  
-  .resident-item {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    
-    
-  }
-  
-  .resident-card {
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 10px;
-    height: 100%;
-  }
-  
-  .resident-card img {
-    width: 100%;
-  }
-  
-  @media (min-width: 458px) {
-    .resident-item {
-      width: 50%;
-    }
-    .banner {
-      height: 300px;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .resident-item {
-      width: 33.3333333%;
-      height: 400px;
-    }
-  }
-  
-  @media (min-width: 982px) {
-    .resident-item {
-      width: 25%;
-      height: 600px;
-    }
-  }
-  
+}
