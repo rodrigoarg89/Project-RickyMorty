@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Pagination from "./components/Pagination";
 import ResidentInfo from "./components/ResidentInfo";
+// import SearchBox from "./components/SearchBox";
 import "./styles.css";
 
 function App() {
@@ -27,22 +29,23 @@ function App() {
   return (
     <div className="main">
       <div className="banner"></div>
-      <div className="rm-logo">
+      <a className="rm-logo" href="#wiki">
           <img
             className="logo-poke"
             src="https://vignette.wikia.nocookie.net/logopedia/images/b/b1/Rick_and_Morty.svg/revision/latest?cb=20180522080112"
             alt=""
           />
-      </div>
+      </a>
       <div className="App">
-        <div className="wiki">
-          <h1>RICK AND MORTY WIKI</h1>
+        <div className="wiki" id="wiki">
+          <h1 id="wiki">RICK AND MORTY WIKI</h1>
+        {/* <SearchBox /> */}
 
         </div>
         <div className="type-id">
           <div>
             <input
-            id="wiki"
+            
               className="input-type"
               type="text"
               value={typeId}
