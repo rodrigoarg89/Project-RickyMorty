@@ -1,8 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Pagination from "./components/Pagination";
 import ResidentInfo from "./components/ResidentInfo";
-// import SearchBox from "./components/SearchBox";
 import "./styles.css";
 
 function App() {
@@ -39,7 +37,6 @@ function App() {
       <div className="App">
         <div className="wiki">
           <h1>RICK AND MORTY WIKI</h1>
-        {/* <SearchBox /> */}
 
         </div>
         <div className="type-id">
