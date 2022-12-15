@@ -11,6 +11,7 @@ const ResindentInfo = ({url}) => {
 
     }, [])
 
+
     // console.log(resident)
 
     return (
@@ -20,7 +21,7 @@ const ResindentInfo = ({url}) => {
                 <p><b>Name:</b> {resident.name}</p>
                 <p><b>Status:</b> {resident.status}</p>
                 <p><b>Birthplace:</b> {resident.origin?.name}</p>
-                <p><b>Number of episodes:</b> {resident.episode?.length}</p>
+                <p><b>Number of episodes where appear:</b> {resident.episode?.length}</p>
             </div>
         </li>
     );
